@@ -1,4 +1,4 @@
-# message-queuing-service project
+# kotlin-message-queuing-service project
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 

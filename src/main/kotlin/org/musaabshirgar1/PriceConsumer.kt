@@ -33,10 +33,11 @@ class PriceConsumer : Runnable {
     override fun run() {
         try {
             connectionFactory?.createContext(Session.AUTO_ACKNOWLEDGE).use { context ->
-                val consumer = context?.createConsumer(context.createQueue("prices"))
+                val consumer = context?.createConsumer(
+                        context.createQueue("prices")
+                )
                 while (true) {
-                    val message = consumer
-                            ?.receive() ?: return // receive returns `null` if the JMSConsumer is closed
+                    val message = consumer?.receive() ?: return // receive returns `null` if the JMSConsumer is closed
                     lastPrice = message.getBody(String::class.java)
                 }
             }

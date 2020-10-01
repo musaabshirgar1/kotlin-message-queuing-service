@@ -8,4 +8,4 @@ pluginManagement {
       id 'io.quarkus' version "${quarkusPluginVersion}"
     }
 }
-rootProject.name='message-queuing-service'
+rootProject.name='kotlin-message-queuing-service'

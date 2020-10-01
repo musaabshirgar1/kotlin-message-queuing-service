@@ -32,7 +32,8 @@ class PriceProducer : Runnable {
         connectionFactory?.createContext(Session.AUTO_ACKNOWLEDGE).use { context ->
             context?.createProducer()?.send(
                     context.createQueue("prices"),
-                    random.nextInt(100).toString())
+                    random.nextInt(100).toString()
+            )
         }
     }
 }

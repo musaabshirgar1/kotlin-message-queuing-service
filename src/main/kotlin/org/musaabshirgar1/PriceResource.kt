@@ -13,6 +13,7 @@ import javax.ws.rs.core.MediaType
 class PriceResource {
     @Inject
     var consumer: PriceConsumer? = null
+
     @GET
     @Path("last")
     @Produces(MediaType.TEXT_PLAIN)
